@@ -122,18 +122,18 @@ class DraftPickerApp:
 
         # # Define colors for teams
         self.team_colors = {
-            '백배': '#FF6347',   # Tomato
-            '의환': '#00FFFF',   # Gold
-            '영하': '#FF4500',   # GreenYellow
-            '원준': '#00BFFF',   # Cyan
-            '젶': '#FFD700',   # HotPink
-            '로나': '#8A2BE2',   # BlueViolet
-            '원기': '#7FFF00',   # Chartreuse
-            '데릭': '#FF69B4',   # Crimson
-            '종건': '#32CD32',   # DeepSkyBlue
-            '장혁': '#DC143C',  # OrangeRed
-            '루이': '#ADFF2F',  # GoldenRod
-            '정훈': '#DAA520'   # LimeGreen
+            'team1': '#FF6347',   
+            'team2': '#00FFFF',  
+            'team3': '#FF4500',  
+            'team4': '#00BFFF',   
+            'team5': '#FFD700',  
+            'team6': '#8A2BE2',  
+            'team7': '#7FFF00', 
+            'team8': '#FF69B4',  
+            'team9': '#32CD32',  
+            'team10': '#DC143C', 
+            'team11': '#ADFF2F', 
+            'team12': '#DAA520' 
         }
 
         # Create frames for layout
@@ -170,7 +170,7 @@ class DraftPickerApp:
         self.picked_teams_text.pack(fill=tk.Y, expand=True)
         self.picked_teams_text.configure(font=self.korean_font)
 
-        self.teams = ['백배', '의환', '영하', '원준', '젶', '로나', '원기', '데릭', '종건', '장혁', '루이', '정훈']
+        self.teams = ['team1', 'team2', 'team3', 'team4', 'team5', 'team6', 'team7', 'team8', 'team9', 'team10', 'team11', 'team12']
         self.weights = [14.1, 14.1, 14.1, 12.6, 10.9, 9.1, 7.6, 6.1, 4.6, 3.1, 2.1, 1.6]  # Hardcoded weights
         self.probabilities = self.normalize_weights(self.weights)
         self.top4_chances = self.calculate_top4_chances(self.probabilities)
